@@ -16,6 +16,14 @@
             color: #24292e;
             background: #f7f8fa;
         }
+
+        /* 校徽图片尺寸 */
+        .school-logo {
+            width: 70px;   /* 校徽大小，可自行修改 */
+            height: 70px;
+            object-fit: contain; /* 保持图片比例不变形 */
+        }
+        
         /* 导航栏 */
         .nav { background: #24292e; padding: 1rem; text-align: center; }
         .nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
@@ -53,8 +61,12 @@
     </style>
 </head>
 <body>
-    <!-- 顶部超大标题 -->
-    <div class="top-title">中国科学技术大学物理实验误差管理中心</div>
+   <!-- 🔥 顶部：校徽 + 大标题（核心修改） -->
+    <div class="top-title">
+        <img src="ustcblack.png" class="school-logo" alt="校徽"> <!-- 校徽图片 -->
+        中国科学技术大学物理实验误差管理中心
+    </div>
+
 
     <!-- 导航栏 -->
     <div class="nav">
