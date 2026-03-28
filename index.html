@@ -61,7 +61,30 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .link:hover { text-decoration: underline; }
+        .link:hover { text-decoration: underline; 
+        
+        /* 🔥 新增：红色销毁按钮样式 */
+        .destroy-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .destroy-btn {
+            background-color: #ff0000; /* 红色 */
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .destroy-btn:hover {
+            background-color: #cc0000; /* 鼠标悬浮变暗红 */
+        }
+
+        
     </style>
 </head>
 <body>
@@ -103,5 +126,11 @@
             <a href="news.html" class="link">查看更多新闻 →</a>
         </div>
     </div>
+
+     <!-- 🔥 主页最底部：红色销毁按钮 -->
+    <div class="destroy-container">
+        <a href="destroy.html" class="destroy-btn">彻底销毁此网页</a>
+    </div>
+    
 </body>
 </html>
