@@ -7,9 +7,13 @@
     <style>
         /* 全局样式 */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        /* 顶部超大标题 */
+        
+        /* ✅ 修复：顶部标题 + 校徽 横向布局（核心修复） */
         .top-title {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             padding: 25px 15px;
             font-size: 32px;
             font-weight: bold;
@@ -19,9 +23,9 @@
 
         /* 校徽图片尺寸 */
         .school-logo {
-            width: 70px;   /* 校徽大小，可自行修改 */
+            width: 70px;
             height: 70px;
-            object-fit: contain; /* 保持图片比例不变形 */
+            object-fit: contain;
         }
         
         /* 导航栏 */
@@ -61,12 +65,11 @@
     </style>
 </head>
 <body>
-   <!-- 🔥 顶部：校徽 + 大标题（核心修改） -->
+    <!-- 顶部：校徽 + 大标题 -->
     <div class="top-title">
-        <img src="ustcblack.jpg" class="school-logo" alt="校徽"> <!-- 校徽图片 -->
+        <img src="ustcblack.jpg" class="school-logo" alt="校徽">
         中国科学技术大学物理实验误差管理中心
     </div>
-
 
     <!-- 导航栏 -->
     <div class="nav">
@@ -76,16 +79,14 @@
         <a href="report.html">实验报告</a>
     </div>
 
-    <!-- 主页主体内容：3大板块 -->
+    <!-- 主页主体内容 -->
     <div class="content">
-        <!-- 1. 误差管理中心简介 -->
         <div class="section">
             <h2>误差管理中心简介</h2>
             <p>物理实验误差管理中心是中国科学技术大学专属的现实管理与稳定机构，主要负责全校物理实验的误差收集、数据校准、实验规范制定<s>、干涉现实</s>等工作。</p>
             <p>中心秉承严谨、精准、科学的工作理念，为师生提供专业的服务，保障物理实验教学与科研工作的安全性、准确性与规范性。</p>
         </div>
 
-        <!-- 2. 通知公告 -->
         <div class="section">
             <h2>通知公告</h2>
             <p>【紧急通知】请遵守文件内详细通知进行相应的疏散撤离和紧急抢险工作。</p>
@@ -95,7 +96,6 @@
             <a href="notice.html" class="link">查看全部通知 →</a>
         </div>
 
-        <!-- 3. 新闻动态 -->
         <div class="section">
             <h2>新闻动态</h2>
             <p>20XX年3月23日，误差管理中心完成新版误差分析及现实稳定算法升级。</p>
