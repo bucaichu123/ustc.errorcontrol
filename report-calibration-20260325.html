@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础物理实验仪器校准报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "SimSun", serif; }
+        .top-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 25px 15px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #24292e;
+            background: #f7f8fa;
+            font-family: Arial, sans-serif;
+        }
+        .nav { background: #24292e; padding: 1rem; text-align: center; font-family: Arial, sans-serif; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        .nav a:hover { color: #6cc644; }
+        .school-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        body { background: #ffffff; text-align: left; }
+        .content { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 20px; 
+        }
+        .content-header {
+            text-align: center;
+            border-bottom: 1px solid #000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        .content-header h1 {
+            color: #000;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        .doc-meta {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .doc-content {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.8;
+        }
+        .doc-content h2 {
+            font-size: 18px;
+            margin: 15px 0 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .del-text {
+            text-decoration: line-through;
+            color: #666;
+        }
+        .handwrite {
+            color: #d32f2f;
+            font-style: italic;
+            font-family: "KaiTi", serif;
+        }
+        .formula {
+            font-family: "Times New Roman", serif;
+            margin: 8px 0;
+            text-align: center;
+        }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+        }
+        .sign-area {
+            margin-top: 25px;
+            line-height: 2;
+        }
+        .back-btn {
+            margin-top: 50px;
+            display: inline-block;
+            font-size: 18px;
+            color: #24292e;
+            text-decoration: none;
+            border: 1px solid #24292e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .back-btn:hover {
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-title">
+        <img src="ustcblack.jpg" class="school-logo" alt="校徽">
+        中国科学技术大学物理实验误差控制中心
+    </div>
+    <div class="nav">
+        <a href="index.html">网站首页</a>
+        <a href="news.html">新闻动态</a>
+        <a href="notice.html">通知公告</a>
+        <a href="report.html">文件归档</a>
+    </div>
+
+    <div class="content">
+        <div class="content-header">
+            <h1>【原始记录】20XX 年春季学期基础物理实验仪器校准报告</h1>
+        </div>
+
+        <div class="doc-meta">
+            <p>校准类别:2026 年春季学期本科基础物理实验开课前置校准</p>
+            <p>实验房间:东校区第一教学楼1214 室</p>
+            <p>操作员:秦风 | 工号:[未授权内容] | 所属院系:物理学院</p>
+            <p>校准日期:2026 年03 月25 日</p>
+            <p>审核人:(空白) | 仪器管理员:(空白)</p>
+        </div>
+
+        <div class="doc-content">
+            <h2>一、校准依据</h2>
+            <p>1. 《中国科学技术大学物理实验教学中心仪器校准管理规范(2023 版)》</p>
+            <p>2. 《大学物理实验》(中国科学技术大学出版社,2022 年第3 版)对应实验仪器校准技术要求</p>
+            <p>3. JJF 1059.1-2012《测量不确定度评定与表示》国家计量技术规范</p>
+
+            <h2>二、校准环境条件</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>环境参数</th>
+                        <th>实测值</th>
+                        <th>允许波动范围</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>环境温度</td>
+                        <td>22.3℃</td>
+                        <td>20℃±5℃</td>
+                    </tr>
+                    <tr>
+                        <td>相对湿度</td>
+                        <td>45%</td>
+                        <td>30%-60%</td>
+                    </tr>
+                    <tr>
+                        <td>大气压强</td>
+                        <td>101.2kPa</td>
+                        <td>86kPa-106kPa</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>环境备注:实验室门窗关闭,中央空调恒温运行,无强磁场、强振动源干扰</p>
+
+            <h2>三、校准项目、原始记录与修改痕迹</h2>
+            <h3>校准项目1:单摆法测重力加速度实验仪校准(严重异常)</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>仪器名称</td>
+                        <td>单摆实验仪(含光电门计时系统、数字毫秒计)</td>
+                    </tr>
+                    <tr>
+                        <td>仪器编号</td>
+                        <td>USTC-PL-2012-017</td>
+                    </tr>
+                    <tr>
+                        <td>出厂日期</td>
+                        <td>2012 年09 月</td>
+                    </tr>
+                    <tr>
+                        <td>校准技术要求</td>
+                        <td>重力加速度测量值与合肥地区标准值(9.7805m/s²)相对偏差≤2%;计时精度≤0.1ms;光电门响应正常</td>
+                    </tr>
+                    <tr>
+                        <td>校准方法</td>
+                        <td>单摆法:固定有效摆长L=80.00cm,小角度(θ<5°)无初速度释放摆球,测量50 次全振动总时间t 计算单摆周期T,由公式 g = 4π²L/T² 计算重力加速度g 值;同条件重复测量10 组,更换同型号2 台仪器复测验证数据重复性</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>原始测量记录(10 组平行测量)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>50 次全振动总时间t(s)</th>
+                        <th>单摆周期T(s)</th>
+                        <th>计算g 值(m/s²)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>81.90</td><td>1.6380</td><td>14.73</td></tr>
+                    <tr><td>2</td><td>81.92</td><td>1.6384</td><td>14.72</td></tr>
+                    <tr><td>3</td><td>81.88</td><td>1.6376</td><td>14.74</td></tr>
+                    <tr><td>4</td><td>81.90</td><td>1.6380</td><td>14.73</td></tr>
+                    <tr><td>5</td><td>81.94</td><td>1.6388</td><td>14.71</td></tr>
+                    <tr><td>6</td><td>81.90</td><td>1.6380</td><td>14.73</td></tr>
+                    <tr><td>7</td><td>81.92</td><td>1.6384</td><td>14.72</td></tr>
+                    <tr><td>8</td><td>81.86</td><td>1.6372</td><td>14.75</td></tr>
+                    <tr><td>9</td><td>81.90</td><td>1.6380</td><td>14.73</td></tr>
+                    <tr><td>10</td><td>81.88</td><td>1.6376</td><td>14.74</td></tr>
+                </tbody>
+            </table>
+
+            <h3>原始数据处理结果</h3>
+            <p class="formula">10 组测量平均值: $\overline{g}=14.72 m / s^{2}$</p>
+            <p class="formula">组内相对标准偏差: $RSD=0.08$</p>
+            <p class="formula">与合肥地区标准值相对偏差: $E=\frac{(14.72-9.7805)}{9.7805} × 100 \%=50.5 \%$</p>
+
+            <p>仪器状态判定:测量值严重超出允许偏差范围,仪器不合格,需停机排查维修</p>
+            <p>换了USTC-PL-2012-018、019 两台仪器复测,结果均在14.6-14.8m/s²之间,无明显差异;仪器计时功能自检正常,摆长复核无偏差,水平校准无误,找不到系统误差来源。要不要上报?30 号就要开课,报了肯定要停实验,教学事故担不起</p>
+
+            <p class="del-text">【以下为划改覆盖内容】</p>
+            <p class="formula">10 组测量平均值: $\overline{g}=9.78 ~m / s^{2}$</p>
+            <p>与合肥地区标准值相对偏差: $≤0.01$ ,符合校准技术要求</p>
+            <p>仪器状态判定:合格,可正常用于本科教学实验</p>
+            <p class="handwrite">【红笔手写批注,覆盖划改区域:部分仪器使用年限较长,光电门存在老化响应延迟,系统误差过大,修正为合肥本地标准重力加速度值,不影响本科教学实验使用。——秦风】</p>
+
+            <p>后略</p>
+
+            <h2>四、校准结果汇总</h2>
+            <p class="del-text">本次校准共完成3 台核心实验仪器的校准,其中单摆法重力加速度实验仪测量值严重偏离标准值,多台仪器复测结果一致,无法定位误差来源,判定为不合格;杨氏模量测量仪、迈克尔逊干涉仪轻微超差。建议暂停实验开课,组织人员全面排查仪器及环境问题,其余实验待仪器调试复测后开课。</p>
+            <p>本次校准共完成2026 年春季学期本科基础物理实验3 台核心仪器的校准,所有仪器测量偏差均符合教学实验技术要求,全部判定为合格,可正常用于20XX 年春季学期本科基础物理实验教学。</p>
+
+            <h2>五、备注</h2>
+            <p>无特殊情况。<span class="handwrite">真的没问题吗?</span></p>
+
+            <h2>六、签字确认</h2>
+            <div class="sign-area">
+                <p>校准人签字:秦风 秦风</p>
+                <p>日期:20XX 年03 月25 日</p>
+                <p>审核人签字:__________</p>
+                <p>日期:</p>
+                <p>仪器管理员签字:__________</p>
+                <p>日期:</p>
+            </div>
+
+            <p class="footer-note">本报告所有划改处均已由校准人签字确认,无签字划改无效;所有校准原始记录需留存3 年以上,随时接受教学中心核查</p>
+        </div>
+
+        <a href="report.html" class="back-btn">← 返回文件归档列表</a>
+    </div>
+    <!-- 引入MathJax渲染公式 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
