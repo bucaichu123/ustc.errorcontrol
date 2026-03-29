@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于误差通量监测异常的问询与回复</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        .top-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 25px 15px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #24292e;
+            background: #f7f8fa;
+        }
+        .nav { background: #24292e; padding: 1rem; text-align: center; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        .nav a:hover { color: #6cc644; }
+        .school-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        body { background: #ffffff; text-align: left; }
+        .content { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 20px; 
+        }
+        .content-header {
+            border-bottom: 2px solid #24292e;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .content-header h1 {
+            color: #24292e;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        .doc-meta {
+            color: #666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .doc-content {
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.8;
+        }
+        .doc-block {
+            margin-bottom: 25px;
+            padding-left: 12px;
+            border-left: 3px solid #e0e0e0;
+        }
+        .doc-block h3 {
+            color: #24292e;
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+        .back-btn {
+            margin-top: 50px;
+            display: inline-block;
+            font-size: 18px;
+            color: #24292e;
+            text-decoration: none;
+            border: 1px solid #24292e;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-title">
+        <img src="ustcblack.jpg" class="school-logo" alt="校徽">
+        中国科学技术大学物理实验误差控制中心
+    </div>
+    <div class="nav">
+        <a href="index.html">网站首页</a>
+        <a href="news.html">新闻动态</a>
+        <a href="notice.html">通知公告</a>
+        <a href="report.html">文件归档</a>
+    </div>
+
+    <div class="content">
+        <div class="content-header">
+            <h1>【内部工作通知】关于误差通量监测异常的问询与回复</h1>
+            <div class="doc-meta">发布时间:20XX-03-28 11:02 | 发件人:李默(值班主管)、张慎(运维组)</div>
+        </div>
+
+        <div class="doc-content">
+            <div class="doc-block">
+                <h3>问询(李默 2026-03-28 10:40)</h3>
+                <p>张工:</p>
+                <p>今日10:32,系统全域误差通量监测值出现异常飙升,当前数值为日常平均值的370%,已触发二级预警阈值。</p>
+                <p>请核实该异常是否为新升级的V4.0 系统算法适配问题,2 小时内予以回复,避免误触发应急处置流程。</p>
+            </div>
+
+            <div class="doc-block">
+                <h3>回复(张慎 2026-03-28 11:02)</h3>
+                <p>李主管:</p>
+                <p>收到。此异常为V4.0 系统新算法的阈值校准延迟,属于升级后正常适配现象。新系统对微幅误差的捕捉精度大幅提升,导致监测数值暂时偏高。</p>
+                <p>预计3 日内系统完成自校准,数值将自动恢复至正常范围,无需启动任何处置流程,请勿触发应急机制,避免影响正常教学秩序。</p>
+            </div>
+        </div>
+
+        <a href="report.html" class="back-btn">← 返回文件归档列表</a>
+    </div>
+</body>
+</html>
