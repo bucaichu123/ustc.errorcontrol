@@ -30,7 +30,15 @@
             height: 50px;
             object-fit: contain;
         }
-
+        /* 新增的监控链接样式，保持与下载链接一致的醒目红色 */
+        .view-link {
+            font-size: 20px; 
+            color: #d32f2f;
+            text-decoration: none;
+        }
+        .view-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -45,14 +53,15 @@
         <a href="report.html">文件归档</a>
     </div>
     <div class="content">
-        <h1>实验报告列表</h1>
+        <h1>归档文件列表</h1>
       
+
+
         <div class="notice-item">
             <h3>【内部工作通知】关于误差通量监测异常的问询与回复</h3>
             <p>时间：20XX-03-28</p>
             <div class="section">
               <p>点击下方链接下载文件：</p>
-              <!-- 核心下载链接：href指向pdf文件名，download强制下载 -->
               <a href="问询与回复.pdf" download class="link" style="font-size: 20px; color: #d32f2f;">
               📄 下载 问询与回复.pdf 
               </a>
@@ -64,24 +73,48 @@
             <p>时间：20XX-03-25</p>
             <div class="section">
               <p>点击下方链接下载文件：</p>
-              <!-- 核心下载链接：href指向pdf文件名，download强制下载 -->
               <a href="校准报告.pdf" download class="link" style="font-size: 20px; color: #d32f2f;">
               📄 下载 校准报告.pdf 
               </a>
             </div>
         </div>
 
+        <!-- 新增：3月25日 监控记录 -->
+        <div class="notice-item">
+            <h3>【监控记录】3月25日，晚上20:35，东校区一教1203室</h3>
+            <p>时间：20XX-03-25</p>
+            <div class="section">
+              <p>点击下方链接查看详情：</p>
+              <a href="monitor-1203-20260330.html" class="view-link">
+              📹 查看监控文字记录
+              </a>
+            </div>
+        </div>
+        
+
         <div class="notice-item">
             <h3>20XX年3月23日系统升级运维日志</h3>
             <p>时间：20XX-03-23</p>
             <div class="section">
               <p>点击下方链接下载文件：</p>
-              <!-- 核心下载链接：href指向pdf文件名，download强制下载 -->
               <a href="升级运维日志.pdf" download class="link" style="font-size: 20px; color: #d32f2f;">
               📄 下载 升级运维日志.pdf 
               </a>
             </div>
         </div>
+
+        <!-- 新增：3月23日 监控记录 -->
+        <div class="notice-item">
+            <h3>【监控记录】3月23日，晚上23:45，误差控制中心设备室</h3>
+            <p>时间：20XX-03-23</p>
+            <div class="section">
+              <p>点击下方链接查看详情：</p>
+              <a href="monitor-control-20260323.html" class="view-link">
+              📹 查看监控文字记录
+              </a>
+            </div>
+        </div>
+
         
     </div>
 </body>
