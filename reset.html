@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最终规则重置 - 应急处置系统</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Courier New", monospace;
+            overflow: hidden;
+            background-color: #000;
+        }
+        /* 1. 初始黑屏阶段 */
+        .black-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        .black-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* 2. 白屏主界面 */
+        .white-screen {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .white-screen.visible {
+            opacity: 1;
+        }
+        .reset-header {
+            font-size: 32px;
+            color: #d32f2f;
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        /* 3. 进度条样式 */
+        .progress-container {
+            width: 60%;
+            max-width: 600px;
+            height: 40px;
+            background: #eee;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+            transition: width 0.1s linear;
+        }
+        .progress-text {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* 4. 警告弹窗样式 */
+        .warning-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 3px solid #d32f2f;
+            padding: 40px 60px;
+            box-shadow: 0 0 30px rgba(211, 47, 47, 0.5);
+            z-index: 10000;
+            display: none;
+            text-align: center;
+        }
+        .warning-modal.show {
+            display: block;
+            animation: shake 0.5s ease-in-out;
+        }
+        .warning-text {
+            font-size: 28px;
+            color: #d32f2f;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        /* 弹窗抖动动画 */
+        @keyframes shake {
+            0%, 100% { transform: translate(-50%, -50%) translateX(0); }
+            25% { transform: translate(-50%, -50%) translateX(-10px); }
+            75% { transform: translate(-50%, -50%) translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 阶段1：初始黑屏 -->
+    <div class="black-screen" id="blackScreen"></div>
+
+    <!-- 阶段2：重置程序界面 -->
+    <div class="white-screen" id="whiteScreen">
+        <div class="reset-header">最终规则重置程序已启动</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="progress-text" id="progressText">校准进度 0%</div>
+    </div>
+
+    <!-- 阶段3：警告弹窗 -->
+    <div class="warning-modal" id="warningModal">
+        <div class="warning-text">
+            重置程序受阻<br>
+            检测到外部观测者介入<br>
+            无法完成规则重置
+        </div>
+    </div>
+
+    <script>
+        // 页面加载后自动执行流程
+        window.onload = function() {
+            // 1. 保持黑屏3秒
+            setTimeout(function() {
+                // 隐藏黑屏，显示白屏
+                document.getElementById('blackScreen').classList.add('hidden');
+                document.getElementById('whiteScreen').classList.add('visible');
+                
+                // 2. 启动进度条动画
+                startProgressAnimation();
+            }, 3000);
+        };
+
+        function startProgressAnimation() {
+            let currentProgress = 0;
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            
+            // 每100ms更新一次进度
+            const animationInterval = setInterval(function() {
+                if (currentProgress < 15) {
+                    // 进度未到15%，继续增长
+                    currentProgress += 0.5;
+                    progressBar.style.width = currentProgress + '%';
+                    progressText.textContent = '校准进度 ' + Math.floor(currentProgress) + '%';
+                } else {
+                    // 进度到达15%，停止动画
+                    clearInterval(animationInterval);
+                    
+                    // 3. 延迟1秒后弹出警告
+                    setTimeout(function() {
+                        document.getElementById('warningModal').classList.add('show');
+                    }, 1000);
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
