@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统V4.0升级运维日志</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        .top-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 25px 15px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #24292e;
+            background: #f7f8fa;
+        }
+        .nav { background: #24292e; padding: 1rem; text-align: center; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        .nav a:hover { color: #6cc644; }
+        .school-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        body { background: #ffffff; text-align: left; }
+        .content { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 20px; 
+        }
+        .content-header {
+            border-bottom: 2px solid #24292e;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .content-header h1 {
+            color: #24292e;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        .doc-meta {
+            color: #666;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .doc-content {
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.8;
+        }
+        .log-item {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .del-text {
+            text-decoration: line-through;
+            color: #666;
+        }
+        .sign-area {
+            margin-top: 25px;
+            line-height: 2;
+            text-align: right;
+        }
+        .back-btn {
+            margin-top: 50px;
+            display: inline-block;
+            font-size: 18px;
+            color: #24292e;
+            text-decoration: none;
+            border: 1px solid #24292e;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-title">
+        <img src="ustcblack.jpg" class="school-logo" alt="校徽">
+        中国科学技术大学物理实验误差控制中心
+    </div>
+    <div class="nav">
+        <a href="index.html">网站首页</a>
+        <a href="news.html">新闻动态</a>
+        <a href="notice.html">通知公告</a>
+        <a href="report.html">文件归档</a>
+    </div>
+
+    <div class="content">
+        <div class="content-header">
+            <h1>【原始记录】系统V4.0 升级运维日志</h1>
+            <div class="doc-meta">运维人:张慎 | 日期:20XX-03-23</div>
+        </div>
+
+        <div class="doc-content">
+            <div class="log-item">21:00 启动系统V4.0 版本升级,关闭对外预警接口,进入维护模式</div>
+            <div class="log-item">22:30 主系统核心算法模块升级完成,自检通过</div>
+            <div class="log-item">23:00 主系统监测模块升级完成,自检通过</div>
+            <div class="log-item">23:42 启动冗余校准模块适配,进入最后一步测试</div>
+            <div class="log-item">23:45 冗余校准模块通讯警告,故障代码 ERR-0x7F: Calibration Unit Communication Failure,模块离线</div>
+            <div class="log-item">23:45 冗余校准模块适配完成,所有模块自检通过,状态正常</div>
+            <div class="log-item">23:47 系统空载测试,所有功能正常,误差通量监测正常</div>
+            <div class="log-item">23:50 升级完成,系统上线,退出维护模式</div>
+
+            <div class="sign-area">
+                <p>运维人签字:张慎</p>
+                <p>日期:20XX-03-23</p>
+            </div>
+
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
+
+            <div class="content-header">
+                <h1>【原始记录】核心工控机自检报告(升级后)</h1>
+                <div class="doc-meta">自检人:张慎 | 日期:20XX-03-23 | 自检时间:20XX-03-23 23:46</div>
+            </div>
+
+            <h3>自检结果:</h3>
+            <div class="log-item">1. 主系统模块:正常</div>
+            <div class="log-item">2. 监测模块:正常</div>
+            <div class="log-item">3. <span class="del-text">冗余校准模块:故障,通讯中断,校准功能失效</span></div>
+            <div class="log-item">3. 冗余校准模块:正常</div>
+            <div class="log-item">4. 锚定推送功能:正常</div>
+
+            <div class="sign-area">
+                <p>自检人签字:张慎</p>
+                <p>日期:20XX-03-23</p>
+            </div>
+        </div>
+
+        <a href="report.html" class="back-btn">← 返回文件归档列表</a>
+    </div>
+</body>
+</html>
