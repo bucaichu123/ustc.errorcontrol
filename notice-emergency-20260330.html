@@ -97,6 +97,31 @@
         .back-btn:hover {
             background: #f7f7f7;
         }
+        /* 新增：最终规则重置按钮样式 */
+        .reset-btn-container {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        .reset-btn {
+            display: inline-block;
+            padding: 25px 50px;
+            font-size: 28px;
+            color: #d32f2f;
+            border: 3px solid #d32f2f;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+        }
+        .reset-btn:hover {
+            background-color: #d32f2f;
+            color: white;
+            box-shadow: 0 0 20px rgba(211, 47, 47, 0.4);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -158,6 +183,11 @@
         </div>
 
         <a href="notice.html" class="back-btn">← 返回通知公告列表</a>
+
+        <!-- 新增：最终规则重置按钮 -->
+        <div class="reset-btn-container">
+            <a href="reset.html" class="reset-btn">【最终规则重置】</a>
+        </div>
     </div>
 </body>
 </html>
